@@ -5,48 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youssef Ahmed</title>
     <link rel="icon" type="image/png" href="images/mylaravel.ico">
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+    </script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
     <nav>
-        <a href="#about"><i class="fas fa-user"></i> About</a> |
-        <a href="#work-experience"><i class="fas fa-briefcase"></i> Work Experience</a> |
-        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a> |
-        <a href="#skills"><i class="fas fa-cogs"></i> Skills</a> |
-        <a href="#tools"><i class="fas fa-tools"></i> Tools</a> |
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="index.html" class="nav-brand" aria-label="Youssef Ahmed home">Youssef<span>Ahmed</span></a>
+        <a href="index.html" aria-current="page"><i class="fas fa-house"></i> Home</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#work-experience"><i class="fas fa-briefcase"></i> Work Experience</a>
+        <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="skills.html"><i class="fas fa-cogs"></i> Skills</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <i class="fas fa-moon"></i>
+            <span>Dark</span>
+        </button>
     </nav>
 
     <div class="profile-header">
-
-        <div class="profile-header">
-            <img src="images/youssef_iamge.jpg" alt="Youssef Ahmed Profile Photo">
-            <div class="profile-info">
-                <h1>Youssef Ahmed, Software Engineer</h1>
-                <p>Currently, Software Engineer at
-                    <a href="https://www.informatique-eg.com/" target="_blank">Informatique</a>.
-                </p>
+        <img src="images/9ed2a5a1-bbb2-4052-a161-b05a22f2cfa6.png" alt="Youssef Ahmed Profile Photo">
+        <div class="profile-info">
+            <p class="eyebrow">Software Engineer</p>
+            <h1>Youssef Ahmed</h1>
+            <p>Backend-focused developer building Laravel applications, APIs, and practical DevOps workflows.</p>
+            <p>Currently at <a href="https://www.informatique-eg.com/" target="_blank">Informatique</a>.</p>
+            <div class="profile-actions">
+                <a href="files/youssef_cv.pdf" download class="btn-cv"><i class="fas fa-file-download"></i> My Resume</a>
+                <a href="contact.html" class="btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
             </div>
-        </div>
-
-
-        <div class="download-cv">
-            <a href="files/youssef_cv.pdf" download class="btn-cv">My Resume</a>
+            <div class="profile-highlights">
+                <span><strong>Laravel</strong> Backend</span>
+                <span><strong>REST APIs</strong> Design</span>
+                <span><strong>Azure</strong> Cloud & CI/CD</span>
+            </div>
         </div>
     </div>
 </header>
-<main role="main">
+<main id="main-content" role="main">
+    <section class="overview-strip" aria-label="Portfolio highlights">
+        <a href="projects.html" class="overview-card">
+            <i class="fas fa-layer-group"></i>
+            <span>Projects</span>
+            <strong>5 featured builds</strong>
+        </a>
+        <a href="skills.html" class="overview-card">
+            <i class="fas fa-cloud"></i>
+            <span>Cloud & DevOps</span>
+            <strong>Azure, CI/CD, Docker</strong>
+        </a>
+        <a href="contact.html" class="overview-card">
+            <i class="fas fa-message"></i>
+            <span>Available</span>
+            <strong>Open to collaboration</strong>
+        </a>
+    </section>
     <section id="about">
         <h2>About Me</h2>
+        <p class="section-intro">I focus on building practical web systems, clean backend logic, and deployment-ready applications that are easy to maintain and improve.</p>
         <ul>
             <li><i class="fas fa-user"></i> Name: Youssef Ahmed</li>
             <li><i class="fas fa-briefcase"></i> Job Title: Software Engineer</li>
             <li><i class="fas fa-graduation-cap"></i> Education: Bachelor's in Computer Science, Faculty of Computers
                 and Information, Benha University
             </li>
+            <li><i class="fas fa-award"></i> GPA: 3.6</li>
             <li><i class="fas fa-map-marker-alt"></i> Location: Cairo, Egypt</li>
             <li><i class="fas fa-envelope"></i> Email: <a href="mailto:youssef.ahmed.fci@gmail.com">youssef.ahmed.fci@gmail.com</a>
             </li>
@@ -55,54 +85,97 @@
     </section>
     <section id="work-experience">
         <h2>Work Experience</h2>
-        <h3>Software Engineer &mdash; Tech Solutions Inc.</h3>
-        <p>Developed and maintained web applications using Laravel, Vue.js, and MySQL. Collaborated with
-            cross-functional teams to deliver scalable solutions and improve user experience.</p>
-        <h3>Backend Developer &mdash; Web Innovators</h3>
-        <p>Implemented RESTful APIs and optimized database queries for high-traffic applications. Contributed to agile
-            development processes and code reviews.</p>
-        <h3>Instructor at 3C &mdash; Creative Web Studio</h3>
-        <p>Designed and developed responsive user interfaces using HTML, CSS, and JavaScript. Delivered training
-            sessions and mentored students in web development best practices.</p>
+        <div class="timeline">
+            <article class="experience-item">
+                <span class="timeline-dot"></span>
+                <h3>Software Engineer &mdash; Tech Solutions Inc.</h3>
+                <p>Developed and maintained web applications using Laravel, Vue.js, and MySQL. Collaborated with
+                    cross-functional teams to deliver scalable solutions and improve user experience.</p>
+            </article>
+            <article class="experience-item">
+                <span class="timeline-dot"></span>
+                <h3>Backend Developer &mdash; Web Innovators</h3>
+                <p>Implemented RESTful APIs and optimized database queries for high-traffic applications. Contributed to agile
+                    development processes and code reviews.</p>
+            </article>
+            <article class="experience-item">
+                <span class="timeline-dot"></span>
+                <h3>Instructor at 3C &mdash; Creative Web Studio</h3>
+                <p>Designed and developed responsive user interfaces using HTML, CSS, and JavaScript. Delivered training
+                    sessions and mentored students in web development best practices.</p>
+            </article>
+        </div>
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-card">
-            <h3><i class="fab fa-laravel" style="color:#ff2d20; margin-right:0.5rem;"></i>Notes++ (Laravel)</h3>
+        <div class="project-grid">
+        <article class="project-card featured-project">
+            <h3><i class="fas fa-users-gear"></i> DevHub Community</h3>
+            <p>DevHub Community is a developer platform inspired by dev.to, Medium, and Stack Overflow. It supports articles, discussions, reactions, comments, real-time chat, semantic search, AI article explanations, code execution, recommendations, notifications, videos, dashboards, badges, and speech-to-text article writing.</p>
+            <div class="chip-row">
+                <span>Community Platform</span>
+                <span>Real-time Chat</span>
+                <span>AI Features</span>
+                <span>Piston API</span>
+                <span>Algolia</span>
+            </div>
+            <a href="https://github.com/devhub-platform/backend-development" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="project-card featured-project">
+            <h3><i class="fab fa-laravel"></i> Notes++</h3>
             <p>Notes++ is a web-based note-taking application built with Laravel. It allows users to create, organize,
                 and manage notes efficiently. The app features user authentication, rich text editing, tagging, and
                 search functionality, making it ideal for personal productivity and team collaboration
-                <a href="https://github.com/youssef-ahmed-cs/Notes-App-Laravel" target="_blank">View on GitHub</a>
             </p>
-        </div>
+            <div class="chip-row">
+                <span>Laravel</span>
+                <span>Auth</span>
+                <span>Search</span>
+            </div>
+            <a href="https://github.com/youssef-ahmed-cs/Notes-App-Laravel" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-        <div class="project-card">
-            <h3><i class="fab fa-laravel" style="color:#ff2d20; margin-right:0.5rem;"></i>Task Manager API (Laravel)
-            </h3>
+        <article class="project-card">
+            <h3><i class="fab fa-laravel"></i> Task Manager API</h3>
             <p>The Task Manager API is a RESTful backend built with Laravel for managing tasks and projects.
                 It supports user authentication, CRUD operations for tasks, project organization, tagging, and search.
                 Designed for productivity apps, it enables efficient task tracking and collaboration.
-                <a href="hhttps://github.com/youssef-ahmed-cs/Task-Manager-Laravel" target="_blank">View on GitHub</a>
             </p>
-        </div>
+            <div class="chip-row">
+                <span>API</span>
+                <span>CRUD</span>
+                <span>Laravel</span>
+            </div>
+            <a href="https://github.com/youssef-ahmed-cs/Task-Manager-Laravel" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-        <div class="project-card">
-            <h3><i class="fab fa-laravel" style="color:#ff2d20; margin-right:0.5rem;"></i>Blog App (Laravel)</h3>
+        <article class="project-card">
+            <h3><i class="fab fa-laravel"></i> Blog App</h3>
             <p>Blog App is a personal blogging platform built with Laravel. It enables users to create, edit, and manage
                 blog posts with features like user authentication, categories, comments,
                 and post-search. The app provides a clean interface for sharing ideas and engaging with readers.
-                <a href="https://github.com/youssef-ahmed-cs/Blogs-app-using-laravel" target="_blank">View on GitHub</a>
             </p>
-        </div>
+            <div class="chip-row">
+                <span>CMS</span>
+                <span>Comments</span>
+                <span>Laravel</span>
+            </div>
+            <a href="https://github.com/youssef-ahmed-cs/Blogs-app-using-laravel" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
 
-        <div class="project-card">
-            <h3><i class="fab fa-python" style="color:#f1cc11; margin-right:0.5rem;"></i>Plant Disease Detection (Python
-                CNN)</h3>
+        <article class="project-card">
+            <h3><i class="fab fa-python"></i> Plant Disease Detection</h3>
             <p>This project uses a Convolutional Neural Network (CNN) built with Python to automatically detect and
                 classify plant diseases from leaf images. It leverages deep learning for image analysis, helping farmers
-                and researchers identify diseases early to improve crop health and yield. <a
-                        href="https://github.com/youssef-ahmed-cs/plant_disease_detection-main" target="_blank">View
-                    on GitHub</a></p>
+                and researchers identify diseases early to improve crop health and yield.</p>
+            <div class="chip-row">
+                <span>Python</span>
+                <span>CNN</span>
+                <span>Deep Learning</span>
+            </div>
+            <a href="https://github.com/youssef-ahmed-cs/plant_disease_detection-main" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+        </article>
         </div>
     </section>
 
@@ -144,14 +217,87 @@
             </section>
 
             <section>
+                <h3>Cloud & CI/CD</h3>
+                <ul>
+                    <li><i class="fab fa-microsoft"></i> Microsoft Azure Fundamentals</li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> Cloud Deployment</li>
+                    <li><i class="fas fa-infinity"></i> CI/CD Pipelines</li>
+                    <li><i class="fab fa-github"></i> GitHub Actions</li>
+                    <li><i class="fab fa-docker"></i> Docker Containers</li>
+                    <li><i class="fas fa-server"></i> App Hosting & Server Basics</li>
+                    <li><i class="fas fa-chart-line"></i> Monitoring & Logs</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AI Coding Agents</h3>
+                <ul>
+                    <li><i class="fas fa-robot"></i> OpenAI Codex</li>
+                    <li><i class="fas fa-brain"></i> Claude</li>
+                    <li><i class="fab fa-github"></i> GitHub Copilot</li>
+                    <li><i class="fas fa-terminal"></i> Agent-assisted debugging</li>
+                    <li><i class="fas fa-code-branch"></i> AI-assisted code review</li>
+                    <li><i class="fas fa-wand-magic-sparkles"></i> Prompting for development workflows</li>
+                </ul>
+            </section>
+
+            <section>
                 <h3>Concepts</h3>
                 <ul>
                     <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
                     <li><i class="fas fa-sync-alt"></i> Agile Methodologies</li>
+                    <li><i class="fas fa-shield-alt"></i> API Security Basics</li>
+                    <li><i class="fas fa-sitemap"></i> RESTful Architecture</li>
                     <li><i class="fas fa-brain"></i> Problem Solving</li>
                     <li><i class="fas fa-users"></i> Team Collaboration</li>
                 </ul>
             </section>
+        </div>
+    </section>
+
+    <section id="devops">
+        <h2>DevOps Topics</h2>
+        <div class="topic-grid">
+            <article class="topic-card">
+                <i class="fas fa-code-branch"></i>
+                <h3>Version Control</h3>
+                <p>Git branching, pull requests, code reviews, release tags, and clean commit history.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-infinity"></i>
+                <h3>CI/CD Pipelines</h3>
+                <p>Automated testing, build steps, deployment checks, and repeatable delivery with GitHub Actions or GitLab CI.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fab fa-docker"></i>
+                <h3>Containers</h3>
+                <p>Dockerfiles, local development containers, image builds, environment variables, and service isolation.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-server"></i>
+                <h3>Linux & Servers</h3>
+                <p>Basic Linux administration, SSH, Nginx/Apache configuration, permissions, logs, and process management.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Deployment</h3>
+                <p>Deploying web apps and APIs, managing domains, SSL certificates, app configuration, and cloud storage.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Monitoring</h3>
+                <p>Application logs, uptime checks, error tracking, performance metrics, and alerting for production systems.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-database"></i>
+                <h3>Database Operations</h3>
+                <p>Backups, migrations, seeders, query checks, restore planning, and safer production database changes.</p>
+            </article>
+            <article class="topic-card">
+                <i class="fas fa-lock"></i>
+                <h3>Security Practices</h3>
+                <p>Secret management, least privilege access, dependency updates, HTTPS, and secure deployment defaults.</p>
+            </article>
         </div>
     </section>
 
@@ -194,6 +340,8 @@
             <section>
                 <h3>Collaboration</h3>
                 <ul>
+                    <li><i class="fab fa-git-alt"></i> Git</li>
+                    <li><i class="fab fa-github"></i> GitHub</li>
                     <li><i class="fab fa-github"></i> GitHub Desktop</li>
                     <li><i class="fab fa-gitlab"></i> GitLab</li>
                     <li><i class="fas fa-robot"></i> GitHub Copilot</li>
@@ -209,23 +357,60 @@
                 </ul>
             </section>
 
+            <section>
+                <h3>DevOps & Deployment</h3>
+                <ul>
+                    <li><i class="fab fa-docker"></i> Docker</li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> GitHub Actions</li>
+                    <li><i class="fas fa-server"></i> Nginx</li>
+                    <li><i class="fab fa-linux"></i> Linux</li>
+                    <li><i class="fas fa-key"></i> SSH</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AI Development Tools</h3>
+                <ul>
+                    <li><i class="fas fa-robot"></i> OpenAI Codex</li>
+                    <li><i class="fas fa-brain"></i> Claude</li>
+                    <li><i class="fab fa-github"></i> GitHub Copilot</li>
+                    <li><i class="fas fa-wand-magic-sparkles"></i> AI-assisted coding workflows</li>
+                </ul>
+            </section>
+
         </div>
     </section>
 
 
 </main>
+<a class="whatsapp-float" href="https://wa.me/201277672245" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 <footer id="contact">
-    <p>I'm currently looking to join a cross-functional team that values improving people's lives through accessible
-        design. Or have a project in mind? Let's connect.</p>
-    <a href="https://github.com/youssef-ahmed-cs" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-    <a href="https://linkedin.com/in/youssef-ahmed-cs" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    |
-    <a href="https://www.facebook.com/share/19bHq7h9Zb/" target="_blank"><i class="fab fa-facebook"></i>
-        Facebook</a> |
-    <a href="https://wa.me/+201277672245" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a> |
-    <a href="mailto:youssef.ahmed.fci@outlook.com" target="_blank"><i class="fas fa-envelope"></i> Email</a> |
-    <a href="#about"><i class="fas fa-arrow-up"></i> Up </a>
-    <p>&copy; 2025 Youssef Ahmed</p>
+    <div class="contact-layout">
+        <div class="contact-copy">
+            <h2>Send Message</h2>
+            <p>I'm currently looking to join a cross-functional team that values improving people's lives through accessible
+                design. Or have a project in mind? Let's connect.</p>
+            <div class="footer-links">
+                <a href="https://github.com/youssef-ahmed-cs" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/youssef-ahmed-cs" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.facebook.com/share/19bHq7h9Zb/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/+201277672245" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:youssef.ahmed.fci@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+                <a href="#about"><i class="fas fa-arrow-up"></i> Up</a>
+            </div>
+        </div>
+        <form class="contact-form" data-email="youssef.ahmed.fci@gmail.com">
+            <label for="message-body">Message</label>
+            <textarea id="message-body" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+    <p>&copy; 2026 Youssef Ahmed</p>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

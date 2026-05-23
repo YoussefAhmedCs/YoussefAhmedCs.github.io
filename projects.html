@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Youssef Ahmed</title>
+    <!-- <link rel="icon" type="image/png" href="images/mylaravel.ico"> -->
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="page-header">
+    <nav>
+        <a href="index.html" class="nav-brand" aria-label="Youssef Ahmed home">Youssef<span>Ahmed</span></a>
+        <a href="index.html"><i class="fas fa-house"></i> Home</a>
+        <a href="index.html#about"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html" aria-current="page"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="skills.html"><i class="fas fa-cogs"></i> Skills</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <i class="fas fa-moon"></i>
+            <span>Dark</span>
+        </button>
+    </nav>
+    <section class="page-hero">
+        <p class="eyebrow">Selected Work</p>
+        <h1>Projects Built Around Useful Developer Workflows</h1>
+        <p>Backend systems, community platforms, APIs, AI features, and practical tools with Laravel, Python, DevOps, and cloud-ready patterns.</p>
+    </section>
+</header>
+<main id="main-content" class="page-main" role="main">
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <article class="project-card featured-project">
+                <h3><i class="fas fa-users-gear"></i> DevHub Community</h3>
+                <p>A developer community platform inspired by dev.to, Medium, and Stack Overflow with articles, discussions, reactions, comments, real-time chat, semantic search, AI explanations, code execution, recommendations, notifications, videos, dashboards, badges, and speech-to-text writing.</p>
+                <div class="chip-row">
+                    <span>Community Platform</span>
+                    <span>Real-time Chat</span>
+                    <span>AI Features</span>
+                    <span>Piston API</span>
+                    <span>Algolia</span>
+                </div>
+                <a href="https://github.com/devhub-platform/backend-development" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="project-card">
+                <h3><i class="fab fa-laravel"></i> Notes++</h3>
+                <p>A Laravel note-taking app with authentication, rich text editing, tagging, search, and organized personal productivity workflows.</p>
+                <div class="chip-row">
+                    <span>Laravel</span>
+                    <span>Auth</span>
+                    <span>Search</span>
+                </div>
+                <a href="https://github.com/youssef-ahmed-cs/Notes-App-Laravel" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="project-card">
+                <h3><i class="fab fa-laravel"></i> Task Manager API</h3>
+                <p>A RESTful Laravel backend for task and project management with authentication, CRUD operations, organization, tagging, and search.</p>
+                <div class="chip-row">
+                    <span>API</span>
+                    <span>CRUD</span>
+                    <span>Laravel</span>
+                </div>
+                <a href="https://github.com/youssef-ahmed-cs/Task-Manager-Laravel" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </article>
+            <article class="project-card">
+                <h3><i class="fab fa-python"></i> Plant Disease Detection</h3>
+                <p>A Python CNN project that classifies plant disease from leaf images to support early detection and better crop-health decisions.</p>
+                <div class="chip-row">
+                    <span>Python</span>
+                    <span>CNN</span>
+                    <span>Deep Learning</span>
+                </div>
+                <a href="https://github.com/youssef-ahmed-cs/plant_disease_detection-main" target="_blank" class="card-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </section>
+</main>
+<a class="whatsapp-float" href="https://wa.me/201277672245" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script src="script.js"></script>
+</body>
+</html>

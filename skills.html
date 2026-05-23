@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Youssef Ahmed</title>
+    <link rel="icon" type="image/png" href="images/mylaravel.ico">
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="page-header">
+    <nav>
+        <a href="index.html" class="nav-brand" aria-label="Youssef Ahmed home">Youssef<span>Ahmed</span></a>
+        <a href="index.html"><i class="fas fa-house"></i> Home</a>
+        <a href="index.html#about"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="skills.html" aria-current="page"><i class="fas fa-cogs"></i> Skills</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <i class="fas fa-moon"></i>
+            <span>Dark</span>
+        </button>
+    </nav>
+    <section class="page-hero">
+        <p class="eyebrow">Technical Stack</p>
+        <h1>Backend, Cloud, DevOps, and AI Coding Workflows</h1>
+        <p>A practical skill set focused on building APIs, shipping reliable Laravel apps, collaborating with AI coding agents, and learning cloud deployment with Azure and CI/CD.</p>
+    </section>
+</header>
+<main id="main-content" class="page-main" role="main">
+    <section>
+        <h2>Skills Map</h2>
+        <div class="flex-sections">
+            <section>
+                <h3>Backend & Web</h3>
+                <ul>
+                    <li><i class="fab fa-laravel"></i> Laravel</li>
+                    <li><i class="fas fa-sitemap"></i> RESTful APIs</li>
+                    <li><i class="fas fa-shield-alt"></i> API Security Basics</li>
+                    <li><i class="fab fa-vuejs"></i> Vue.js</li>
+                    <li><i class="fas fa-vial"></i> PhpUnit</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Cloud & CI/CD</h3>
+                <ul>
+                    <li><i class="fab fa-microsoft"></i> Microsoft Azure Fundamentals</li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> Cloud Deployment</li>
+                    <li><i class="fas fa-infinity"></i> CI/CD Pipelines</li>
+                    <li><i class="fab fa-github"></i> GitHub Actions</li>
+                    <li><i class="fab fa-docker"></i> Docker Containers</li>
+                    <li><i class="fas fa-chart-line"></i> Monitoring & Logs</li>
+                </ul>
+            </section>
+            <section>
+                <h3>AI Coding Agents</h3>
+                <ul>
+                    <li><i class="fas fa-robot"></i> OpenAI Codex</li>
+                    <li><i class="fas fa-brain"></i> Claude</li>
+                    <li><i class="fab fa-github"></i> GitHub Copilot</li>
+                    <li><i class="fas fa-terminal"></i> Agent-assisted debugging</li>
+                    <li><i class="fas fa-code-branch"></i> AI-assisted code review</li>
+                    <li><i class="fas fa-wand-magic-sparkles"></i> Prompting for development workflows</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Databases & Tools</h3>
+                <ul>
+                    <li><i class="fas fa-database"></i> MySQL</li>
+                    <li><i class="fas fa-database"></i> MS SQL Server</li>
+                    <li><i class="fas fa-database"></i> Oracle</li>
+                    <li><i class="fas fa-terminal"></i> Git Bash</li>
+                    <li><i class="fas fa-plug"></i> Postman</li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    <section>
+        <h2>DevOps Focus</h2>
+        <div class="topic-grid">
+            <article class="topic-card"><i class="fas fa-code-branch"></i><h3>Version Control</h3><p>Git branching, pull requests, reviews, and release-ready history.</p></article>
+            <article class="topic-card"><i class="fas fa-infinity"></i><h3>CI/CD</h3><p>Automated checks, build steps, and repeatable deployment flows.</p></article>
+            <article class="topic-card"><i class="fas fa-cloud"></i><h3>Azure Cloud</h3><p>App hosting, cloud deployment fundamentals, configuration, and monitoring.</p></article>
+            <article class="topic-card"><i class="fab fa-docker"></i><h3>Containers</h3><p>Dockerfiles, local services, image builds, and environment isolation.</p></article>
+        </div>
+    </section>
+</main>
+<a class="whatsapp-float" href="https://wa.me/201277672245" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script src="script.js"></script>
+</body>
+</html>
