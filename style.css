@@ -433,6 +433,13 @@ a {
     text-decoration: none;
 }
 
+.sponsor-button {
+    align-self: center;
+    border: 0;
+    border-radius: 6px;
+    color-scheme: light;
+}
+
 main {
     width: min(1120px, calc(100% - 2rem));
     margin: -3rem auto 0;
@@ -1227,6 +1234,62 @@ footer a:hover {
         height: 52px;
         font-size: 1.55rem;
     }
+
+    .contribution-container {
+        padding: 0.75rem;
+    }
+}
+
+/* Contribution Graph Section */
+#contributions {
+    background: var(--paper);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+#contributions h2 {
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#contributions h2 i {
+    color: var(--primary);
+}
+
+#contributions .section-intro {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.contribution-container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    margin-top: 1rem;
+    overflow: auto;
+}
+
+.contribution-graph {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform var(--motion-medium) ease;
+}
+
+.contribution-graph:hover {
+    transform: scale(1.02);
 }
 
 @media (prefers-reduced-motion: reduce) {
